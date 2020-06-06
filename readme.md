@@ -29,3 +29,9 @@ After SUBMIT, the form will connect to the google calendar account via Google ca
 *  Notification that event is created should be delivered to entered email.
 *  Create some fake google account to store calendar events.
 *  Task should include ReadMe.md file within the documentation.
+
+## Setup
+
+1. Enable Recaptcha v3 by changing the "XXXXXX" placeholders with their appropriate values in the "index.html" file.
+2. Install required dependencies by executing "composer install" command from the "source" directory.
+3. Generate Calendar API credentials and save them to the root directory under the "calendar_credentials.json" and "calendar_client_secret.json" filenames.
