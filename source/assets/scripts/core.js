@@ -18,4 +18,18 @@ $(document).ready(function() {
         format : "L"
     });
     
+    $("form").submit(function(e) {
+        
+        $.post("process.php", $(this).serialize())
+            .done(function() {
+                $(".toast.success").toast({ "delay" : 2000 }).toast("show");
+            })
+            .fail(function() {
+                $(".toast.error").toast({ "delay" : 2000 }).toast("show");
+            })
+        
+        e.preventDefault();
+        
+    });
+    
 });

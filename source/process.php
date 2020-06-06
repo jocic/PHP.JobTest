@@ -165,12 +165,12 @@
         // Create Client Object
         
         $client->setApplicationName("Google API Application");
-        $client->setScopes(implode(" ", array(
+        $client->setScopes(implode(" ", [
             \Google_Service_Calendar::CALENDAR,
             \Google_Service_Calendar::CALENDAR_READONLY
-        )));
+        ]));
         $client->setAuthConfigFile(__DIR__ . "/calendar_client_secret.json");
-        $client->setAccessToken($accessToken);
+        $client->setAccessToken($access_token);
         $client->setApprovalPrompt("force");
         $client->setAccessType("offline");
         
@@ -269,14 +269,14 @@
         $notif_subject  = "Appointment Notification: " . $name;
         $notif_headers  = "MIME-Version: 1.0\r\n" .
                           "Content-type: text/plain; charset=UTF-8\r\n";
-         
+        
         // Control Variables
         
         $inserted = false;
         
         // Validate Form
         
-        if ($this->is_token_valid($recaptcha))
+        if (is_token_valid($recaptcha))
         {
             // Process Variables.
             
