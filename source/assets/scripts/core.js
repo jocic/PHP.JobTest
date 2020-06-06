@@ -3,7 +3,7 @@
 |* Website: http://www.djordjejocic.com/                   *|
 |* Email Address: office@djordjejocic.com                  *|
 |* ------------------------------------------------------- *|
-|* Filename: application.js                                *|
+|* Filename: core.js                                       *|
 |* ------------------------------------------------------- *|
 |* Copyright (C) 2019                                      *|
 \***********************************************************/
